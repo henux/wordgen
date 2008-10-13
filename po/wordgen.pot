@@ -1,0 +1,124 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Henri Hakkinen
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: wordgen 1.0\n"
+"Report-Msgid-Bugs-To: wordgen-bugs@nongnu.net\n"
+"POT-Creation-Date: 2008-09-30 19:13+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: wordgen.c:65
+#, c-format
+msgid "Usage: %s [OPTIONS]\n"
+msgstr ""
+
+#: wordgen.c:66
+msgid ""
+"Generate word lists.\n"
+"\n"
+"Source characters:\n"
+"  -s, --source=SOURCE    use SOURCE as the source string\n"
+"      --lowercase        use ASCII lowercase characters as SOURCE\n"
+"      --uppercase        use ASCII uppercase characters as SOURCE\n"
+"      --digits           use digits as SOURCE\n"
+"      --xdigits          use lowercase hexadecimal digits as SOURCE\n"
+"      --Xdigits          use uppercase hexadecimal digits as SOURCE\n"
+"      --punct            use ASCII punctuation marks as SOURCE\n"
+"      --alpha            use all ASCII characters as SOURCE\n"
+"      --alnum            use all ASCII characters and digits as SOURCE\n"
+"      --ascii            use all printable 7-bit ASCII characters as SOURCE\n"
+"\n"
+"By default, SOURCE contains all ASCII characters and digits.\n"
+"\n"
+"Length control:\n"
+"  -l, --length=LEN       length of generated words\n"
+"  -l, --length=MIN-MAX   minium and maxium length of generated words\n"
+"\n"
+"The default length for words is 6.\n"
+"\n"
+"Output control:\n"
+"  -o, --output=FILE      output filename\n"
+"  -P, --prefix=STR       prepend words with STR\n"
+"  -S, --suffix=STR       append words with STR\n"
+"\n"
+"By default, words are outputted to stdout.\n"
+"\n"
+"Miscellaneous:\n"
+"      --help             display this help and exit\n"
+"      --version          output version information and exit\n"
+msgstr ""
+
+#. TRANSLATORS: The placeholder indicates the bug-reporting address
+#. for this package. Please add _another line_ saying
+#. "Report translation bugs to <...>\n" with the address for
+#. translation bugs (typically your translation team's web or email
+#. address).
+#: wordgen.c:98
+#, c-format
+msgid ""
+"\n"
+"Report bugs to <%s>.\n"
+msgstr ""
+
+#: wordgen.c:108
+#, c-format
+msgid "Copyright (C) 2008 %s.\n"
+msgstr ""
+
+#. TRANSLATORS: This is a proper name. See the gettext
+#. manual, section Names. Note this is actually a non-ASCII
+#. name: The last name is (with Unicode escapes)
+#. "H\u00e4kkinen" or (with HTML entities) "H&auml;kkinen".
+#: wordgen.c:113 wordgen.c:118
+msgid "Henri Hakkinen"
+msgstr ""
+
+#: wordgen.c:114
+msgid ""
+"License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl."
+"html>\n"
+"This is free software: you are free to change and redistribute it.\n"
+"There is NO WARRANTY, to the extent permitted by law.\n"
+msgstr ""
+
+#: wordgen.c:118
+#, c-format
+msgid ""
+"\n"
+"Written by %s.\n"
+msgstr ""
+
+#: wordgen.c:129 wordgen.c:303
+msgid "out of memory"
+msgstr ""
+
+#: wordgen.c:142
+msgid "misformatted length"
+msgstr ""
+
+#: wordgen.c:144
+msgid "length must be greater than 0"
+msgstr ""
+
+#: wordgen.c:146
+msgid "min length must be less than max length"
+msgstr ""
+
+#: wordgen.c:270
+#, c-format
+msgid "Try `%s --help' for more information.\n"
+msgstr ""
+
+#: wordgen.c:308
+#, c-format
+msgid "can't open %s"
+msgstr ""

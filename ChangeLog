@@ -1,0 +1,31 @@
+2008-09-30  Henri Häkkinen  <henux@users.sourceforge.net>
+
+	* wordgen.c (options, parselen): Removed `--min-length' and
+	`--max-length' and integrated them to `--length'.
+
+2008-09-23  Henri Häkkinen  <henux@users.sourceforge.net>
+
+	* wordgen.c (options): Added --min-length and --max-length
+	options, renamed `--charset' to `--source' and `--postfix' to
+	`--suffix'.
+
+2008-05-27  Henri Häkkinen  <henux@users.sourceforge.net>
+
+	* wordgen.c: Added internationalization support.
+
+2008-05-26  Henri Häkkinen  <henux@users.sourceforge.net>
+
+	* wordgen.c (options): Added `--prefix' and `--postfix' command line
+	switchesa
+	* configure.ac: Included license.
+
+2008-05-25  Henri Häkkinen  <henux@users.sourceforge.net>
+
+	* wordgen.c (options): added `--lowercase', `--uppercase', `--digits',
+	`--xdigits', `--Xdigits', `--punctuations', `--alpha', `--alnum' and
+	`--ascii' command line switches.
+
+2008-05-24  Henri Häkkinen  <henux@users.sourceforge.net>
+
+	Initial version.
+

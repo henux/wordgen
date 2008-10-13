@@ -1,0 +1,123 @@
+.TH "WORDGEN" "1" "September 2008" "Version 1.0" "User Commands"
+.SH NAME
+wordgen \- wordlist generator
+.SH SYNOPSIS
+.B wordgen
+.RI [ OPTIONS ]
+.SH DESCRIPTION
+.B wordgen
+generates every word of a given length that can be formed from characters taken from a source string, with replacement.
+.SH OPTIONS
+.SS "Generic Program Information"
+.TP
+.B \-\^\-help
+Print a short help to stdout and exit.
+.TP
+.B \-\^\-version
+Print version information to stdout and exit.
+.SS "Source Characters"
+.TP
+.BI \-s " SOURCE" "\fR,\fP \-\^\-source=" SOURCE
+Use
+.I SOURCE
+as the source string from which characters are combined to form words.
+.TP
+.B \-\^\-lowercase
+Use lowercase ASCII characters as the source.
+.TP
+.B \-\^\-uppercase
+Use uppercase ASCII characters as the source.
+.TP
+.B \-\^\-digits
+Use digits as the source.
+.TP
+.B \-\^\-xdigits
+Use lowercase hexadecimal digits as the source.
+.TP
+.B \-\^\-Xdigits
+Use uppercase hexadecimal digits as the source.
+.TP
+.B \-\^\-punct
+Use ASCII punctuation marks as the source.
+.TP
+.B \-\^\-alpha
+Use all ASCII characters as the source.
+.TP
+.B \-\^\-alnum
+Use all ASCII characters and digits as the source.
+.TP
+.B \-\^\-ascii
+Use all printable 7-bit ASCII characters as the source.
+.P
+By default, 
+.I SOURCE
+constains all ASCII characters and digits.
+When specifying multiple source strings in the command line, only the last one is used.
+.SS "Length Control"
+.TP
+.BI \-l " LEN" "\fR,\fP \-\^\-length=" LEN
+Generated words will be
+.I LEN
+characters in length.
+.TP
+.BI \-l " MIN\fB-\fPMAX" "\fR,\fP \-\^-length=" MIN\fB-\fPMAX
+Generated words will be
+.I MIN
+to
+.I MAX
+characters in length.
+.P
+The default length for words is six.
+.SS "Output Control"
+.TP
+.BI \-o " FILE" "\fR,\fP \-\^\-output=" FILE
+Generated words will be directed to
+.I FILE
+instead of standard output.
+.TP
+.BI \-P " STR" "\fR,\fP \-\^\-prefix=" STR
+The string
+.I STR
+will be appended to the beginning of each word.
+.TP
+.BI \-S " STR" "\fR,\fP \-\^\-suffix=" STR
+The string
+.I STR
+will be appended to the end of each word.
+.SH EXAMPLES
+Here are some possible ways one can run wordgen.
+.TP
+.B wordgen
+The default behaviour; generates a word list to stdout, containing words of six characters in length from every combination of alpha-numeric ASCII characters.
+.TP
+.B wordgen --digits -l 4 -o words.lst
+Generate a word list file
+.I `words.lst'
+containing four digit numerical codes.
+.TP
+.B wordgen --alnum -l 6-12
+Generate a password list, each password being six to twelve characters in length.
+Depending on your computer's speed, this operation may take some time.
+.TP
+.B wordgen --digits -P 'http://somehost.org/view?id=' -l 6
+Generate a list of URLs, each beginning with the string
+.I http://somehost.org/view?id=
+followed by a six digit numerical code.
+.TP
+.B wordgen --lowercase -l 5 | grep foo
+Generate every word of five characters in length which contains the substring foo.
+.SH AUTHOR
+Written by Henri Hakkinen.
+Thanks for `emma' at
+.I irc.freenode.net
+for correcting my English.
+.SH REPORTING BUGS
+Report bugs to <wordgen-bugs@nongnu.org>.
+.SH COPYRIGHT
+Copyright \(co 2008 Henri Hakkinen.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>.
+.PP
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+.SH SEE ALSO
+\fBgrep\fP(1)

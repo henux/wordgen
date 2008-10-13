@@ -1,0 +1,47 @@
+Wordgen README
+
+Wordgen is a tool for generating a list of words of a given length
+containing every combination of characters from a source string. The -s
+option is used to specify the source string. For example:
+
+     $ wordgen -l 4 -s abc
+
+This would generate a list of words of four characters in length,
+containing every combination of characters from the source string "abc".
+For example, abca, abbc, aaaa, are representative members of such a list.
+By default, words are dumped to stdout but an output file can be set with
+`-o/--output':
+
+     $ wordgen -l 4 -s abcd -o words.lst
+
+A range of lengths can be specified with `-l/--length MIN-MAX' format. For
+example,
+
+     $ wordgen -l 2-5
+
+Several convenient options exist for setting the source character string.
+When these options are used, -s is not necessary and the user need not
+specify a string of their own. These are:
+
+     --lowercase      use ASCII lowercase letters
+     --uppercase      use ASCII uppercase letters
+     --digits         use digits
+     --xdigits        use lowercase hexadecimal digits
+     --Xdigits        use uppercase hexadecimal digits
+     --punctuations   use ASCII punctuation marks
+     --alpha          use all ASCII letters
+     --alnum          use all ASCII letters and digits
+     --ascii          use all printable 7-bit ASCII characters
+
+If several of these options along with the `-s/--source' option are used,
+then the last switch overrides the previous ones.
+
+The `-P/--prefix' and `-S/--suffix' options can be used to specify strings
+which will be appended to the beginning and the end of each word:
+
+     $ wordgen -P foo -S baz -l 2 --digits
+
+This will include foo23baz, foo53baz, and foo44baz among the list of words
+it returns. The default behaviour when invoking wordgen without options is:
+
+     $ wordgen --alnum --length 6
